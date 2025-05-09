@@ -261,7 +261,7 @@ textarea {
   --bs-dark-bg-subtle: #1F1F1F;
 }
 
-.row {
+.row:not([class*='g-']):not([class*='gx-']) {
   --bs-gutter-x: 3rem;
 }
 
