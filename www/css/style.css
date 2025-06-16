@@ -354,6 +354,7 @@ p, .text-wrap-pretty {
   background: url('../img/flames.jpg') no-repeat center;
   background-attachment: fixed;
   background-size: cover;
+  hyphens: auto;
 }
 
 .flames_content {
