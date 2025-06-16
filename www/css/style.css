@@ -351,7 +351,7 @@ p, .text-wrap-pretty {
 }
 
 .flames {
-  background: url('../img/flames.jpg') no-repeat center;
+  background: #000 url('../img/flames.jpg') no-repeat center;
   background-attachment: fixed;
   background-size: cover;
   hyphens: auto;
@@ -365,4 +365,10 @@ p, .text-wrap-pretty {
 .flames--footer {
   background-image: linear-gradient(to bottom, rgb(0 0 0 / 100%), rgb(0 0 0 / 20%)), url('../img/flames.jpg') ;
   background-position: center 20rem;
+}
+
+@media (orientation: portrait) {
+  .flames {
+    background-size: 300vw;
+  }
 }
