@@ -249,6 +249,11 @@ textarea {
  * Bootstrap variable overrides
  */
 
+:root {
+  --gammatec: oklch(0.5953 0.1957 28.78);
+  --gammatec-secondary: oklch(74.61% 0.171 51.56);
+}
+
 :root, [data-bs-theme=light] {
   --bs-font-sans-serif: 'Heebo';
   --bs-primary-text-emphasis: #ee2723;
@@ -256,6 +261,7 @@ textarea {
 }
 
 [data-bs-theme=dark] {
+  --bs-body-color: #FFF;
   --bs-body-bg: #262626;
   --bs-light-bg-subtle: #3C3C3C;
   --bs-dark-bg-subtle: #1F1F1F;
@@ -323,6 +329,10 @@ p, .text-wrap-pretty {
   letter-spacing: 0.05rem;
 }
 
+.lh-md {
+  line-height: 1.75;
+}
+
 .white-space-nowrap {
   white-space: nowrap;
 }
@@ -338,4 +348,20 @@ p, .text-wrap-pretty {
 .stroker {
   width: 4rem;
   height: .7rem;
+}
+
+.flames {
+  background: url('../img/flames.jpg') no-repeat center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.flames_content {
+  background: rgba(0, 0, 0, .65);
+  min-height: 32rem;
+}
+
+.flames--footer {
+  background-image: linear-gradient(to bottom, rgb(0 0 0 / 100%), rgb(0 0 0 / 20%)), url('../img/flames.jpg') ;
+  background-position: center 20rem;
 }
