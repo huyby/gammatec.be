@@ -250,8 +250,8 @@ textarea {
  */
 
 :root {
-  --gammatec: oklch(0.5953 0.1957 28.78);
-  --gammatec-secondary: oklch(74.61% 0.171 51.56);
+  --gammatec: #e65451;
+  --gammatec-secondary: #e4572e;
   --logo-color: var(--bs-body-color);
   --clip-size: 20px;
   --clip-size-small: 10px;
@@ -263,20 +263,19 @@ textarea {
   --bs-body-bg: #ffede3;
   --bs-body-bg-rgb: 255, 237, 227;
   --bs-body-color: #3b372f;
+  --bs-primary: #2567c8;
+  --bs-primary-rgb: 37, 103, 200;
   --bs-dark: #3b372f;
   --bs-dark-rgb: 59, 55, 47;
   --bs-font-sans-serif: 'Heebo';
-  --bs-primary-text-emphasis: #e65451;
-  --bs-secondary-text-emphasis: #e4572e;
+  --bs-primary-text-emphasis: var(--gammatec);
+  --bs-secondary-text-emphasis: var(--gammatec-secondary);
   --bs-orange: var(--gammatec-secondary);
-}
-
-.row:not([class*='g-']):not([class*='gx-']) {
-  --bs-gutter-x: 3rem;
+  --bs-border-radius: 0;
+  --bs-border-radius-lg: 0;
 }
 
 .navbar {
-  --bs-navbar-color: #000;
   --bs-navbar-active-color: var(--bs-primary-text-emphasis);
 }
 
@@ -299,26 +298,23 @@ textarea {
 }
 
 .navbar-toggler {
-  border-color: rgba(238 39 35);
-  border-width: .1rem;
-}
-
-.navbar-toggler:focus {
-  box-shadow: 0 0 0 0.1rem rgba(238, 39, 35);
+  border-color: transparent;
+  background: var(--bs-body-bg);
 }
 
 .dropdown-menu {
+  --bs-dropdown-bg: #fff;
   --bs-dropdown-font-size: 1.1rem;
   --bs-dropdown-border-radius: 0;
-  --bs-dropdown-link-active-bg: #eee
+  --bs-dropdown-link-active-bg: #fbe0d1;
 }
 
 .dropdown-item {
   font-weight: 600;
 }
 
-.bg-opaque {
-  background-color: rgba(255, 255, 255, .65);
+.btn-danger {
+  --bs-btn-bg: var(--gammatec);
 }
 
 /**
@@ -345,8 +341,28 @@ p, .text-wrap-pretty {
   white-space: nowrap;
 }
 
+.text-verwarming {
+  color: var(--bs-primary-text-emphasis);
+}
+
+.text-warmtepompen {
+  color: var(--bs-secondary-text-emphasis);
+}
+
+.text-sanitair {
+  color: rgba(var(--bs-primary-rgb));
+}
+
+.text-ventilatie {
+  color: var(--bs-danger-text-emphasis);
+}
+
+.bg-opaque {
+  background-color: rgba(255, 255, 255, .65);
+}
+
 .bg-gammatec {
-  background-color: var(--gammatec-secondary) !important;
+  background-color: oklch(74.61% 0.171 51.56) !important;
 }
 
 .bg-primary-emphasis {
@@ -419,9 +435,8 @@ p, .text-wrap-pretty {
   clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% var(--clip-size-large), calc(100% - var(--clip-size-large)) 0%);
 }
 
-.flames--footer {
-  background-image: linear-gradient(to bottom, rgb(0 0 0 / 100%), rgb(0 0 0 / 20%)), url('../img/flames.jpg') ;
-  background-position: center 20rem;
+.footer {
+  /*background: #fff;*/
 }
 
 @media (orientation: portrait) {
