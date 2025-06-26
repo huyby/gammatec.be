@@ -313,6 +313,23 @@ textarea {
   font-weight: 600;
 }
 
+.dropdown-toggle::after {
+  --svg-caret: url('data:image/svg+xml,\
+    <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">\
+      <path fill="hsl(1, 75%, 61%)" d="M3.79289 7.54289C4.18342 7.15237 4.81658 7.15237 5.20711 7.54289L9 11.3358L12.7929 7.54289C13.1834 7.15237 13.8166 7.15237 14.2071 7.54289C14.5976 7.93342 14.5976 8.56658 14.2071 8.95711L9.70711 13.4571C9.31658 13.8476 8.68342 13.8476 8.29289 13.4571L3.79289 8.95711C3.40237 8.56658 3.40237 7.93342 3.79289 7.54289Z"></path>\
+    </svg>');
+  border: none;
+  background-image: var(--svg-caret);
+  width: 20px;
+  height: 20px;
+  vertical-align: -0.1em;
+  transition: all .2s ease-in-out;
+}
+
+.dropdown-toggle.show::after {
+  transform: rotate(180deg);
+}
+
 .btn-danger {
   --bs-btn-bg: var(--gammatec);
 }
