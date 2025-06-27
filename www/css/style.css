@@ -455,6 +455,16 @@ p, .text-wrap-pretty {
 .footer {
 }
 
+.service-link .bi {
+  transition: all ease-in-out .2s;
+}
+
+.service-link:hover .bi {
+  margin-right: .3rem;
+  transform: scale(1.05);
+}
+
+
 @media (orientation: portrait) {
   .flames {
     background-size: 300vw;
